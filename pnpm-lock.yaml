@@ -11,6 +11,9 @@ importers:
       '@astrojs/react':
         specifier: ^4.2.1
         version: 4.2.1(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@paper-design/shaders-react':
+        specifier: ^0.0.25
+        version: 0.0.25
       '@tailwindcss/vite':
         specifier: ^4.0.15
         version: 4.0.15(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2))
@@ -422,6 +425,12 @@ packages:
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
+
+  '@paper-design/shaders-react@0.0.25':
+    resolution: {integrity: sha512-Wrc7uEPDmsrSERJlwIaqyl03oKC4fuOjW/Oyy6XVHgA62OW3u0tNVMTNlHGjlPKIwGvUWlndFEsw3jmhbtHVWA==}
+
+  '@paper-design/shaders@0.0.22':
+    resolution: {integrity: sha512-9PigyJI6l+bixYaPG5vhmf4LQaf1B3LN3sqRzgT9WRUc6LVpghH3gicSsCrNNmL05tkXwaawpI7MDZQmptcBTA==}
 
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
@@ -2087,6 +2096,13 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@oslojs/encoding@1.1.0': {}
+
+  '@paper-design/shaders-react@0.0.25':
+    dependencies:
+      '@paper-design/shaders': 0.0.22
+      react: 19.0.0
+
+  '@paper-design/shaders@0.0.22': {}
 
   '@rollup/pluginutils@5.1.4(rollup@4.36.0)':
     dependencies:
