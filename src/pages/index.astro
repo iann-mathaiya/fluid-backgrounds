@@ -2,7 +2,7 @@
 import FluidBackground from "../components/fluid-background";
 import RootLayout from "../layouts/RootLayout.astro";
 
-const tabs = ["Hero Sections", "Bento Cards", "Onboarding", "Portfolios", "UI Components"]
+const TABS = ["Hero Sections", "Bento Cards", "Onboarding", "Portfolios", "UI Components"]
 ---
 
 <RootLayout>
@@ -34,8 +34,14 @@ const tabs = ["Hero Sections", "Bento Cards", "Onboarding", "Portfolios", "UI Co
 			</div>
 		</div>
 
-		<div>
-			
-		</div>
+		<ul class="mt-8 sm:mt-12 flex items-center gap-2">
+			{TABS.map(tab => 
+				<li>
+					<button class="py-1.5 px-4 size-fit text-sm text-zinc-600 hover:text-zinc-900 bg-zinc-200 rounded-full">
+						{tab}
+					</button>
+				</li>
+			)}
+		</ul>
 	</section>
 </RootLayout>
