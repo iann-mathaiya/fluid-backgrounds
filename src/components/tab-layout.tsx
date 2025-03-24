@@ -12,8 +12,8 @@ export default function TabLayout() {
                     <li key={tab}>
                         <button type='button' 
                             className={twMerge(
-                                "py-1.5 px-4 size-fit text-sm text-zinc-600 hover:text-zinc-900 bg-transparent rounded-full",
-                                activeTab === tab && "text-white bg-zinc-900"
+                                "py-1.5 px-4 size-fit text-sm text-zinc-600 hover:text-sky-900 border border-transparent hover:border-sky-200/90 bg-transparent hover:bg-sky-100 rounded-full",
+                                activeTab === tab && "text-sky-900 bg-linear-to-b from-sky-200/60 to-sky-200/80 inset-shadow-xs inset-shadow-white border border-sky-300/70"
                             )}>
                             {tab}
                         </button>
@@ -22,7 +22,7 @@ export default function TabLayout() {
             </ul>
 
             <div className="mt-8">
-                <h2 className="text-lg font-semibold text-zinc-900">{activeTab}</h2>
+                <h2 className="px-4 text-sm text-zinc-900">{activeTab}</h2>
             </div>
         </>
     );
