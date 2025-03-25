@@ -11,8 +11,9 @@ export default function TabLayout() {
                 {TABS.map(tab =>
                     <li key={tab}>
                         <button type='button' 
+                            onClick={() => setActiveTab(tab)}
                             className={twMerge(
-                                "py-1.5 px-4 size-fit text-sm text-zinc-600 hover:text-sky-900 border border-transparent hover:border-sky-200/90 bg-transparent hover:bg-sky-100 rounded-full",
+                                "py-1.5 px-4 size-fit text-sm text-zinc-600 hover:text-sky-900 border border-transparent hover:border-sky-200/90 bg-transparent hover:bg-sky-100 hover:cursor-pointer rounded-full",
                                 activeTab === tab && "text-sky-900 bg-linear-to-b from-sky-200/60 to-sky-200/80 inset-shadow-xs inset-shadow-white border border-sky-300/70"
                             )}>
                             {tab}
