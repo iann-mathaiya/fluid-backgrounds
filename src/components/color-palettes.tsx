@@ -9,7 +9,7 @@ export default function ColorPalettes() {
   };
 
     return (
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {
                 colorPalettes.map((palette) => (
                     <li key={`${palette[0]}-${palette[1]}-${palette[2]}-{${palette[3]}}`}
@@ -18,7 +18,7 @@ export default function ColorPalettes() {
                     >
                         <ul className="flex">
                             {palette.map((color) => (
-                                <li key={color} className="w-1/4 h-64 text-zinc-600">
+                                <li key={color} className="w-1/4 h-64 flex items-center justify-center text-sm text-zinc-600">
                                     {color}
                                 </li>
                             ))}
