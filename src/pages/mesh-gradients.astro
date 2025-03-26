@@ -3,6 +3,7 @@ import RootLayout from "../layouts/RootLayout.astro";
 import FluidLogo from "../components/fluid-logo";
 import colorPalettes from "../lib/color-palettes/100.json";
 import MeshBackground from "../components/mesh-background";
+import { getColorPalettesByRange } from "../lib/utils";
 ---
 
 <RootLayout
@@ -32,16 +33,14 @@ import MeshBackground from "../components/mesh-background";
             </a>
         </div>
 
-        <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {
-                colorPalettes.map((palette) => (
-                    <li class="rounded-xl overflow-hidden">
+                getColorPalettesByRange(colorPalettes, 0, 11).map((palette) => (
+                    <li class="aspect-video rounded-xl overflow-hidden">
                             <MeshBackground color1={palette[0]} color2={palette[1]} color3={palette[2]} color4={palette[2]} client:load />
                     </li>
                 ))
             }
         </ul>
-
-        <!-- <ColorPalettes client:load /> -->
     </section>
 </RootLayout>
