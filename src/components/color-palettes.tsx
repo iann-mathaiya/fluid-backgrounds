@@ -1,12 +1,6 @@
-
-import { twMerge } from "tailwind-merge";
 import colorPalettes from "../lib/color-palettes/100.json";
 
 export default function ColorPalettes() {
-
-    function getGradientClass(palette: string[]) {
-        return `bg-gradient-to-r from-[${palette[0]}] via-25% via-[${palette[1]}] via-50% via-[${palette[2]}] to-[${palette[3]}]`;
-  };
 
     return (
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
