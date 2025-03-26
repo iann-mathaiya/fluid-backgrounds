@@ -1,7 +1,7 @@
 ---
-import ColorPalettes from "../components/color-palettes";
-import FluidBackground from "../components/fluid-background";
 import RootLayout from "../layouts/RootLayout.astro";
+import ColorPalettes from "../components/color-palettes";
+import FluidLogo from "../components/fluid-logo";
 ---
 
 <RootLayout
@@ -10,20 +10,25 @@ import RootLayout from "../layouts/RootLayout.astro";
 >
     <section class="mx-auto p-4 w-full max-w-screen-xl min-h-screen">
         <div class="h-80 sm:my-32 flex flex-col items-center justify-center">
-            <FluidBackground client:load />
+            <a href="/">
+                <FluidLogo client:load />
+            </a>
+
             <div class="mt-8 text-center">
                 <h1 class="text-5xl text-zinc-900 font-extrabold text-balance">
-                    Free Mesh <br> Gradient Collections
+                    Free Mesh <br /> Gradient Collections
                 </h1>
-                <p class="mt-2 text-base text-zinc-600">Made with Paper Shaders</p>
+                <p class="mt-2 text-base text-zinc-600">
+                    Made with Paper Shaders
+                </p>
             </div>
 
             <a
-					href="/playground"
-					class="mt-4 py-2 px-4 size-fit text-xs sm:text-sm text-white whitespace-nowrap border border-zinc-500 hover:border-amber-400 bg-linear-to-b from-zinc-700 to-zinc-950 hover:from-amber-400 hover:via-40% hover:via-amber-500 hover:to-amber-600 inset-shadow-xs inset-shadow-zinc-200/60 rounded-full"
-				>
-					Star on GitHub
-				</a>
+                href="/playground"
+                class="mt-4 py-2 px-4 size-fit text-xs sm:text-sm text-white whitespace-nowrap border border-zinc-500 hover:border-amber-400 bg-linear-to-b from-zinc-700 to-zinc-950 hover:from-amber-400 hover:via-40% hover:via-amber-500 hover:to-amber-600 inset-shadow-xs inset-shadow-zinc-200/60 rounded-full"
+            >
+                Star on GitHub
+            </a>
         </div>
 
         <ColorPalettes client:load />
