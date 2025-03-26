@@ -1,7 +1,8 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
-import ColorPalettes from "../components/color-palettes";
 import FluidLogo from "../components/fluid-logo";
+import colorPalettes from "../lib/color-palettes/100.json";
+import MeshBackground from "../components/mesh-background";
 ---
 
 <RootLayout
@@ -31,6 +32,16 @@ import FluidLogo from "../components/fluid-logo";
             </a>
         </div>
 
-        <ColorPalettes client:load />
+        <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {
+                colorPalettes.map((palette) => (
+                    <li class="rounded-xl overflow-hidden">
+                            <MeshBackground color1={palette[0]} color2={palette[1]} color3={palette[2]} color4={palette[2]} client:load />
+                    </li>
+                ))
+            }
+        </ul>
+
+        <!-- <ColorPalettes client:load /> -->
     </section>
 </RootLayout>
