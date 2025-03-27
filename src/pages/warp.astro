@@ -1,10 +1,8 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
 import FluidMeshLogo from "../components/fluid-mesh-logo";
-import colorPalettes from "../lib/color-palettes/100.json";
-import MeshBackground from "../components/mesh-background";
-import { getColorPalettesByRange } from "../lib/utils";
 import WarpBackground from "../components/warp-background";
+import StarOnGitHub from "../components/star-on-github.astro";
 ---
 
 <RootLayout
@@ -26,12 +24,7 @@ import WarpBackground from "../components/warp-background";
                 </p>
             </div>
 
-            <a
-                href="https://github.com/iann-mathaiya/fluid-backgrounds"
-                class="mt-4 py-2 px-4 size-fit text-xs sm:text-sm text-white whitespace-nowrap border border-zinc-500 hover:border-amber-400 bg-linear-to-b from-zinc-700 to-zinc-950 hover:from-amber-400 hover:via-40% hover:via-amber-500 hover:to-amber-600 inset-shadow-xs inset-shadow-zinc-200/60 rounded-full"
-            >
-                Star on GitHub
-            </a>
+            <StarOnGitHub />
         </div>
 
         <WarpBackground client:load />
