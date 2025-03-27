@@ -36,8 +36,15 @@ import { getColorPalettesByRange } from "../lib/utils";
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {
                 getColorPalettesByRange(colorPalettes, 0, 11).map((palette) => (
-                    <li class="aspect-video rounded-xl overflow-hidden">
-                            <MeshBackground color1={palette[0]} color2={palette[1]} color3={palette[2]} color4={palette[2]} client:load />
+                    <li class="group relative aspect-video rounded-xl overflow-hidden">
+                        <div class="hidden group-hover:flex absolute top-1.5 right-1.5 gap-2">
+                            <button type="button" class="px-2 py-1 text-sm text-zinc-900 bg-zinc-200/30 hover:bg-zinc-200/40 backdrop-blur-2xl hover:cursor-pointer rounded-full">
+                                Copy Code
+                            </button>
+                            {/* Support open in Paper when we collab or they support plugins */}
+                            {/* <p class="text-sm text-zinc-900">Open in Paper</p> */}
+                        </div>
+                        <MeshBackground color1={palette[0]} color2={palette[1]} color3={palette[2]} color4={palette[2]} client:load />
                     </li>
                 ))
             }
