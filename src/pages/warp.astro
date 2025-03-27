@@ -1,8 +1,8 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
-import FluidMeshLogo from "../components/fluid-mesh-logo";
 import WarpBackground from "../components/warp-background";
 import StarOnGitHub from "../components/star-on-github.astro";
+import FluidWarpLogo from "../components/fluid-logos/warp";
 ---
 
 <RootLayout
@@ -12,7 +12,7 @@ import StarOnGitHub from "../components/star-on-github.astro";
     <section class="mx-auto p-4 w-full max-w-screen-xl min-h-screen">
         <div class="h-80 sm:my-32 flex flex-col items-center justify-center">
             <a href="/">
-                <FluidMeshLogo client:load />
+                <FluidWarpLogo client:load />
             </a>
 
             <div class="mt-8 text-center">
