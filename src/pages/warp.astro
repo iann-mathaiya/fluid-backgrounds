@@ -4,6 +4,7 @@ import FluidMeshLogo from "../components/fluid-mesh-logo";
 import colorPalettes from "../lib/color-palettes/100.json";
 import MeshBackground from "../components/mesh-background";
 import { getColorPalettesByRange } from "../lib/utils";
+import WarpBackground from "../components/warp-background";
 ---
 
 <RootLayout
@@ -18,7 +19,7 @@ import { getColorPalettesByRange } from "../lib/utils";
 
             <div class="mt-8 text-center">
                 <h1 class="text-5xl text-zinc-900 font-extrabold text-balance">
-                    Free Mesh <br /> Gradient Collections
+                    Free Warp <br /> Shader Collections
                 </h1>
                 <p class="mt-2 text-base text-zinc-600">
                     Made with Paper Shaders
@@ -26,28 +27,13 @@ import { getColorPalettesByRange } from "../lib/utils";
             </div>
 
             <a
-                href="https://github.com/iann-mathaiya/fluid-backgrounds" target="_blank"
+                href="https://github.com/iann-mathaiya/fluid-backgrounds"
                 class="mt-4 py-2 px-4 size-fit text-xs sm:text-sm text-white whitespace-nowrap border border-zinc-500 hover:border-amber-400 bg-linear-to-b from-zinc-700 to-zinc-950 hover:from-amber-400 hover:via-40% hover:via-amber-500 hover:to-amber-600 inset-shadow-xs inset-shadow-zinc-200/60 rounded-full"
             >
                 Star on GitHub
             </a>
         </div>
 
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {
-                getColorPalettesByRange(colorPalettes, 0, 11).map((palette) => (
-                    <li class="group relative aspect-video rounded-xl overflow-hidden">
-                        <div class="hidden group-hover:flex absolute top-1.5 right-1.5 gap-2">
-                            <button type="button" class="px-2 py-1 text-sm text-zinc-900 bg-zinc-200/30 hover:bg-zinc-200/40 backdrop-blur-2xl hover:cursor-pointer rounded-full">
-                                Copy Code
-                            </button>
-                            {/* Support open in Paper when we collab or they support plugins */}
-                            {/* <p class="text-sm text-zinc-900">Open in Paper</p> */}
-                        </div>
-                        <MeshBackground color1={palette[0]} color2={palette[1]} color3={palette[2]} color4={palette[2]} client:load />
-                    </li>
-                ))
-            }
-        </ul>
+        <WarpBackground client:load />
     </section>
 </RootLayout>
