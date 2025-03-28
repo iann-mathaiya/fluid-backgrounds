@@ -4,6 +4,8 @@ import RootLayout from "../layouts/RootLayout.astro";
 import StarOnGitHub from "../components/star-on-github.astro";
 import FluidMeshLogo from "../components/fluid-logos/mesh";
 import FluidWarpLogo from "../components/fluid-logos/warp";
+import MeshBackground from "../components/mesh-background";
+import WarpBackground from "../components/warp-background";
 ---
 
 <RootLayout>
@@ -28,6 +30,27 @@ import FluidWarpLogo from "../components/fluid-logos/warp";
 				</div>
 			</div>
 		</header>
+
+		<section class="mb-20 grid grid-cols-1 sm:grid-cols-2 gap-4">
+			<a href="/mesh-gradients" class="group relative">
+				<div class="w-full aspect-video rounded-xl overflow-hidden">
+					<MeshBackground color1="#bae6fd" color2="#60a5fa" color3="#312e81" color4="#c4b5fd" client:load/>	
+				</div>	
+				<h2 class="p-1.5 text-sm text-zinc-900 group-hover:text-sky-700 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-sky-500">
+					Mesh Gradients
+				</h2>
+			</a>
+
+			<a href="/warp" class="group relative">
+				<div class="w-full aspect-video rounded-xl overflow-hidden">
+					<WarpBackground color1="#bae6fd" color2="#60a5fa" color3="#312e81" client:load/>	
+				</div>	
+				<h2 class="p-1.5 text-sm text-zinc-900 group-hover:text-sky-700 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-sky-500">
+					Warp
+				</h2>
+			</a>
+		</section>
+	
 	</main>
 
 
