@@ -1,4 +1,4 @@
-import { MeshGradient, Warp } from "@paper-design/shaders-react";
+import { Warp } from "@paper-design/shaders-react";
 
 export default function FluidWarpLogo() {
     return (
