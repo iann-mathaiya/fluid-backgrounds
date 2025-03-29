@@ -1,0 +1,73 @@
+---
+import RootLayout from "../layouts/RootLayout.astro";
+import MeshBackground from "../components/backgrounds/mesh-background";
+---
+
+<RootLayout title="Examples" description="TODO: Add description">
+    <main
+        class="group relative w-full min-h-screen flex items-center justify-center"
+    >
+        <div class="absolute w-full h-full sm:min-h-screen -z-10">
+            <MeshBackground
+                color1="#09090b"
+                color2="#1e293b"
+                color3="#0a0a0a"
+                color4="#3f3f46"
+                speed={0.4}
+                client:load
+            />
+        </div>
+
+        <div class="p-4 sm:p-8 absolute w-full flex flex-col justify-between min-h-screen z-10">
+            <h1 class="text-8xl sm:text-[160px] text-white tracking-tighter leading-20 sm:leading-36 font-bold text-balance">
+               Nikola <br> Tesla
+            </h1>
+
+            <div class="mt-48 sm:mt-0 max-w-screen-lg grid grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h2 class="text-xl font-normal text-zinc-200">Projects</h2>
+
+                    <div class="mt-4 text-sm text-zinc-300 font-normal space-y-2">
+                        <p>Echo</p>
+                        <p>Pocket Studio</p>
+                        <p>Remote Control</p>
+                        <p>Tesla Turbine</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-normal text-zinc-200">Socials</h2>
+
+                    <div class="mt-4 text-sm text-zinc-300 font-normal space-y-2">
+                        <p>GitHub</p>
+                        <p>Twitter</p>
+                        <p>Mastodon</p>
+                        <p>Discord</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-normal text-zinc-200">Clients</h2>
+
+                    <div class="mt-4 text-sm text-zinc-300 font-normal space-y-2">
+                        <p>Astro</p>
+                        <p>Sesame</p>
+                        <p>Figure Labs</p>
+                        <p>TailwindCSS</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-normal text-zinc-200">Featured On</h2>
+
+                    <div class="mt-4 text-sm text-zinc-300 font-normal space-y-2">
+                        <p>Bytes UI</p>
+                        <p>JS World</p>
+                        <p>Console Arena</p>
+                        <p>The Animated Web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</RootLayout>
