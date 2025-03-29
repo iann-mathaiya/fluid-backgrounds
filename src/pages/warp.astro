@@ -43,7 +43,16 @@ import FluidWarpLogo from "../components/fluid-logos/warp";
 
         <section class="mt-8 sm:mt-12 grid gap-4">    
             <div class="w-full aspect-video rounded-xl overflow-hidden">
-                <WarpBackground client:load />
+                <WarpBackground 
+                color1="#FFE74C" 
+                color2="#FF5964" 
+                color3="#35A7FF" 
+                distortion={0.1} 
+                scale={0.2}
+                speed={0.4}
+                rotation={0.5}
+                client:load 
+                />
             </div>
         </section>
     </main>
