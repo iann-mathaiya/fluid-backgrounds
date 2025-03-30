@@ -1,5 +1,4 @@
 ---
-import TabLayout from "../components/tab-layout";
 import RootLayout from "../layouts/RootLayout.astro";
 import StarOnGitHub from "../components/star-on-github.astro";
 import FluidWarpLogo from "../components/fluid-logos/warp";
@@ -7,6 +6,7 @@ import MeshBackground from "../components/backgrounds/mesh-background";
 import WarpBackground from "../components/backgrounds/warp-background";
 import MetaballsBackground from "../components/backgrounds/metaballs-background";
 import SmokeRingBackground from "../components/backgrounds/smoke-ring-background";
+import PerlinNoiseBackground from "../components/backgrounds/perlin-noise-background";
 ---
 
 <RootLayout>
@@ -101,8 +101,8 @@ import SmokeRingBackground from "../components/backgrounds/smoke-ring-background
 				<div class="w-full aspect-video rounded-xl overflow-hidden">
 					<SmokeRingBackground
 						colorBack="#000000"
-						colorInner="#fff"
-						colorOuter="#fff"
+						colorInner="#ffffff"
+						colorOuter="#ffffff"
 						thickness={1}
 						noiseScale={1.8}
 						client:load
@@ -115,6 +115,24 @@ import SmokeRingBackground from "../components/backgrounds/smoke-ring-background
 						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
 					>
 						Smoke Rings
+					</h2>
+					<p class="text-xs text-zinc-600 font-normal">
+						coming soon-<i>ish</i>
+					</p>
+				</div>
+			</a>
+
+			<a href="#" class="group relative">
+				<div class="w-full aspect-video rounded-xl overflow-hidden">
+					<PerlinNoiseBackground color1="#000" color2="#fff" speed={0.4} client:load />
+				</div>
+				<div
+					class="p-1.5 w-full flex items-center justify-between gap-2"
+				>
+					<h2
+						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
+					>
+						Perlin Noise
 					</h2>
 					<p class="text-xs text-zinc-600 font-normal">
 						coming soon-<i>ish</i>
