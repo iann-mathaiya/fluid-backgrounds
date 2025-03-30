@@ -6,6 +6,6 @@ export default function PerlinNoiseBackground(props: PerlinNoiseProps) {
     };
 
     return (
-        <PerlinNoise {...props} style={{ ...defaultProps.style, ...props.style }} />
+        <PerlinNoise {...defaultProps} {...props} style={{ ...defaultProps.style, ...props.style }} />
     );
 }
