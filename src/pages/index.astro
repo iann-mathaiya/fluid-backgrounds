@@ -8,6 +8,7 @@ import MetaballsBackground from "../components/backgrounds/metaballs-background"
 import SmokeRingBackground from "../components/backgrounds/smoke-ring-background";
 import PerlinNoiseBackground from "../components/backgrounds/perlin-noise-background";
 import NeuroNoiseBackground from "../components/backgrounds/neuro-noise-background";
+import DotGridBackground from "../components/backgrounds/dot-grid-background";
 ---
 
 <RootLayout>
@@ -152,6 +153,24 @@ import NeuroNoiseBackground from "../components/backgrounds/neuro-noise-backgrou
 						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
 					>
 						Neuro Noise
+					</h2>
+					<p class="text-xs text-zinc-600 font-normal">
+						coming soon-<i>ish</i>
+					</p>
+				</div>
+			</a>
+
+			<a href="#" class="group relative">
+				<div class="w-full aspect-video rounded-xl overflow-hidden">
+					<DotGridBackground colorBack="#000" colorFill="#fff" colorStroke="fafafa" dotSize={1} gridSpacingX={20} gridSpacingY={20} opacityRange={1} sizeRange={2} client:load />
+				</div>
+				<div
+					class="p-1.5 w-full flex items-center justify-between gap-2"
+				>
+					<h2
+						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
+					>
+						Dot Grid
 					</h2>
 					<p class="text-xs text-zinc-600 font-normal">
 						coming soon-<i>ish</i>
