@@ -2,7 +2,9 @@ import { DotGrid, type DotGridProps } from '@paper-design/shaders-react';
 
 export default function DotGridBackground(props: DotGridProps) {
     const defaultProps = {
-        speed: 0.4,
+        dotSize: 1,
+        gridSpacingX: 20, 
+        gridSpacingY: 20,
         style: { width: '100%', height: '100%' }
     };
 
