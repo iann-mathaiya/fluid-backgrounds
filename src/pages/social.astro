@@ -2,6 +2,7 @@
 import RootLayout from "../layouts/RootLayout.astro";
 import WarpBackground from "../components/backgrounds/warp-background";
 import DotOrbitBackground from "../components/backgrounds/dot-orbit-background";
+import NeuroNoiseBackground from "../components/backgrounds/neuro-noise-background";
 ---
 
 <RootLayout title="Playground for Socials" description="TODO: Add description">
@@ -27,6 +28,16 @@ import DotOrbitBackground from "../components/backgrounds/dot-orbit-background";
 
             <p class="absolute z-10 text-lg text-zinc-900 font-medium">Watch the demo</p>
         </button>  
+
+        <button class="w-full relative max-w-64 h-14 flex items-center justify-center border border-zinc-300 rounded-full shadow-2xl overflow-hidden">
+            <div class="absolute w-full h-full -z-10 rounded-full">
+                <NeuroNoiseBackground colorFront="#000" colorBack="#fff" speed={0.4} client:load />
+            </div>
+
+            <div class="w-full h-full absolute z-10 bg-zinc-900/20"/>
+
+            <p class="absolute z-20 text-lg text-zinc-900 font-medium">Curate your feed</p>
+        </button>
 
         <button class="w-full relative max-w-64 h-14 flex items-center justify-center border border-zinc-100 rounded-full shadow-2xl overflow-hidden">
             <div class="absolute w-full h-full -z-10 rounded-full">
