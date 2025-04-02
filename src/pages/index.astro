@@ -10,6 +10,7 @@ import PerlinNoiseBackground from "../components/backgrounds/perlin-noise-backgr
 import NeuroNoiseBackground from "../components/backgrounds/neuro-noise-background";
 import DotGridBackground from "../components/backgrounds/dot-grid-background";
 import DotOrbitBackground from "../components/backgrounds/dot-orbit-background";
+import GodRaysBackground from "../components/backgrounds/god-rays-background";
 ---
 
 <RootLayout>
@@ -190,6 +191,30 @@ import DotOrbitBackground from "../components/backgrounds/dot-orbit-background";
 						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
 					>
 						Dot Orbit
+					</h2>
+					<p class="text-xs text-zinc-600 font-normal">
+						coming soon-<i>ish</i>
+					</p>
+				</div>
+			</a>
+
+			<a href="#" class="group relative">
+				<div class="w-full aspect-video rounded-xl overflow-hidden">
+					<GodRaysBackground color1="#fed7aa" color2="#fef08a" color3="#f59e0b" colorBack="#000000" frequency={2.4},
+					spotty={0.2},
+					midIntensity={0.8},
+					midSize={1},
+					density={0.2},
+					blending={0},
+					speed={0.5}, client:load />
+				</div>
+				<div
+					class="p-1.5 w-full flex items-center justify-between gap-2"
+				>
+					<h2
+						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
+					>
+						God Rays
 					</h2>
 					<p class="text-xs text-zinc-600 font-normal">
 						coming soon-<i>ish</i>
