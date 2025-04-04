@@ -15,23 +15,22 @@ import SpiralBackground from "../components/backgrounds/spiral-background";
 ---
 
 <RootLayout>
-	<main class="mx-auto p-4 w-full max-w-screen-xl min-h-screen">
-		<header>
-			<div
-				class="h-80 my-16 sm:my-32 flex flex-col items-center justify-center"
-			>
+	<main class="mx-auto p-4 w-full max-w-screen-xl min-h-screen grid grid-cols-1 lg:grid-cols-3 gap-2">
+		<header class="relative">
+			<div class="h-80 my-16 sm:my-16 fixed flex flex-col items-center justify-center lg:items-start lg:justify-start">
 				<a href="/">
 					<FluidWarpLogo client:load />
 				</a>
 
-				<div class="mt-8 mb-4 text-center">
+				<div class="mt-8 mb-4 text-center lg:text-start">
 					<h1
-						class="text-3xl sm:text-5xl text-zinc-900 font-extrabold text-balance"
+						class="text-3xl text-zinc-900 font-extrabold text-balance"
 					>
 						Fluid Backgrounds
 					</h1>
 					<p class="mt-3 text-base text-zinc-600 text-balance">
-						Subtle and fluid backgrounds built with paper shaders.
+						Subtle and fluid backgrounds <br>
+						 built with paper shaders.
 					</p>
 				</div>
 
@@ -44,7 +43,7 @@ import SpiralBackground from "../components/backgrounds/spiral-background";
 			</div>
 		</header>
 
-		<section class="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+		<section class="sm:col-span-2 my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<a href="/mesh-gradients" class="group relative">
 				<div class="w-full aspect-video rounded-xl overflow-hidden">
 					<MeshBackground
