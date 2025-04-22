@@ -12,6 +12,7 @@ import DotGridBackground from "../components/backgrounds/dot-grid-background";
 import DotOrbitBackground from "../components/backgrounds/dot-orbit-background";
 import GodRaysBackground from "../components/backgrounds/god-rays-background";
 import SpiralBackground from "../components/backgrounds/spiral-background";
+import WavesBackground from "../components/backgrounds/waves-background";
 ---
 
 <RootLayout>
@@ -233,6 +234,24 @@ import SpiralBackground from "../components/backgrounds/spiral-background";
 						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
 					>
 						Spiral
+					</h2>
+					<p class="text-xs text-zinc-600 font-normal">
+						coming soon-<i>ish</i>
+					</p>
+				</div>
+			</a>
+
+			<a href="#" class="group relative">
+				<div class="w-full aspect-video rounded-xl overflow-hidden">
+					<WavesBackground color1="#000" color2="#fff" scale={10} client:load />
+				</div>
+				<div
+					class="p-1.5 w-full flex items-center justify-between gap-2"
+				>
+					<h2
+						class="text-sm text-zinc-900 group-hover:text-zinc-950 font-medium underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500"
+					>
+						Waves
 					</h2>
 					<p class="text-xs text-zinc-600 font-normal">
 						coming soon-<i>ish</i>

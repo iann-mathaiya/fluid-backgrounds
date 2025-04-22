@@ -10,7 +10,7 @@ export default function TabLayout() {
             <ul className="mt-8 sm:mt-12 flex items-center gap-2">
                 {TABS.map(tab =>
                     <li key={tab}>
-                        <button type='button' 
+                        <button type='button'
                             onClick={() => setActiveTab(tab)}
                             className={twMerge(
                                 "py-1.5 px-4 size-fit text-sm text-zinc-600 hover:text-sky-900 border border-transparent hover:border-sky-200/90 bg-transparent hover:bg-sky-100 hover:cursor-pointer rounded-full",
